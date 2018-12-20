@@ -12,7 +12,7 @@ router.get("/", function (req, res) {
 
 router.post("/api/burgers", function (req, res) {
     console.log(req)
-    burger.insertOne(req.body, function (result) {
+    burger.insertOne(req.body.newBurger, function (result) {
         res.json({ id: result.insertId });
         console.log('result.insertid: ' + result.insertId);
     });
@@ -20,7 +20,11 @@ router.post("/api/burgers", function (req, res) {
 
 router.put("/api/burgers/:id", function (req, res) {
     const id = req.params.id;
-    const changedStatus = req.body.toStatus
+    let changedStatus;
+    console.log(req.body.devour)
+    if (req.body.devour === 'true') { changedStatus = true }
+    if (req.body.devour === 'false') { changedStatus = false }
+    console.log('changedstatus: ', changedStatus);
 
     console.log("id: " + id);
 
@@ -34,8 +38,7 @@ router.put("/api/burgers/:id", function (req, res) {
 });
 
 router.delete("/api/burgers/:id", function (req, res) {
-    const id = "id: " + req.params.id;
-
+    const id = req.params.id;
     burger.deleteOne(id, function (result) {
         if (result.affectedRows == 0) {
             return res.status(404).end();

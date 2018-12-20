@@ -18,9 +18,11 @@ const orm = {
             cb(res);
         });
     },
-    updateOne: function(table, columnOne, valueOne, columnTwo, valueTwo) {
+    updateOne: function(table, columnOne, valueOne, columnTwo, valueTwo, cb) {
         let query = 'UPDATE ?? SET ?? = ? WHERE ?? = ?'
-        connection.query(query, [table, columnOne, valueOne, columnTwo, valueTwo, cb], function(err, res) {
+        connection.query(query, [table, columnOne, valueOne, columnTwo, valueTwo], function(err, res) {
+            console.log(err)
+            console.log(res)
             if(err) throw err;
             cb(res);
         });
