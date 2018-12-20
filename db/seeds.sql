@@ -1,0 +1,2 @@
+INSERT INTO burgers (burger_name, devoured)
+VALUES ('Double Animal Style', false), ('Whiskey King Burger', false), ('A Cheeseburger', false), ('The Original Burger', false), ('The Golden Burger', false);
