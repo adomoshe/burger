@@ -24,39 +24,3 @@ burger = {
 };
 
 module.exports = burger;
-
-// burger.selectAll(function (result) {
-//     console.log(result);
-//     if (result.affectedRows == 0) {
-//         return res.status(404).end();
-//     } else {
-//         res.status(200).end();
-//     };
-// });
-
-// burger.insertOne('El Clasico', function (result) {
-//     if (result.affectedRows == 0) {
-//         return res.status(404).end();
-//     } else {
-//         res.status(200).end();
-//     };
-// });
-
-// burger.updateOne('El Clasico', true, function (result) {
-//     if (result.affectedRows == 0) {
-//         return res.status(404).end();
-//     } else {
-//         res.status(200).end();
-//     };
-// });
-
-// burger.deleteOne(6, function (result) {
-//     if (result.affectedRows == 0) {
-//         return res.status(404).end();
-//     } else {
-//         res.status(200).end();
-//     };
-// })
-
-
-
