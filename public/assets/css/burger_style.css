@@ -1,0 +1,30 @@
+
+body {
+    background: url('../img/sun.jpg') no-repeat fixed center;
+}
+
+.navbar {
+    margin-bottom: 25px;
+}
+
+.btn {
+    margin: 5px;
+}
+
+#burger-submit {
+    margin: 0px;
+    margin-top: 15px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#burger-pic {
+    height: 90px;
+    width: 75px;
+}
+
+.jumbotron {
+    background-color: rgba(233, 236, 239, 90%);
+}

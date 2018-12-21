@@ -1,9 +1,10 @@
 <li>
+    {{#if devoured}}<img src='/assets/img/burger.png' alt='burger' id='burger-pic'>{{else}}<img src='/assets/img/plate.png' alt='burger' id='burger-pic'>{{/if}}
 	{{burger_name}}
 
-	<button class="change-devour" data-id="{{id}}" data-devour="{{devoured}}">
-		{{#if devoured}}Devour!{{else}}Reorder!{{/if}}
+	<button class="change-devour btn btn-danger" data-id="{{id}}" data-devour="{{devoured}}">
+		{{#if devoured}}Devour!{{else}}Re-order!{{/if}}
 	</button>
 
-	<button class="delete" data-id="{{id}}">DELETE!</button>
+	<button class="delete btn btn-secondary" data-id="{{id}}">DELETE!</button>
 </li>
